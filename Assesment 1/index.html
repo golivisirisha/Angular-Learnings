@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Traffic signal Awareness</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+  </head>
+  <body>        
+    <h1 class="my-5 font-effect-shadow-multiple text-center text-success">Interactive Traffic Signal Display</h1>
+
+
+    <div class="container text-center mt-5 d-flex justify-content-center">
+            <div class="traffic-light mt-4 mb-2 me-4">
+                <div id="redLight" class="light red"></div>
+                <div id="yellowLight" class="light yellow"></div>
+                <div id="greenLight" class="light green"></div>  
+            </div>
+            <div class="buttons-container ms-md-5 mt-3">
+                <button id="redButton" class="btn btn-outline-danger font-weight-bold mt-5 " onclick="showSection('redSection', 'redButton','red')">Red Signal</button class="text-shadow"><p class="m-0">Stop</p>
+                <button id="yellowButton" class="btn btn-outline-warning font-weight-bold " onclick="showSection('yellowSection', 'yellowButton','yellow')">Yellow Signal</button><p class="text-shadow">Wait</p>
+                <button id="greenButton" class="btn btn-outline-success font-weight-bold " onclick="showSection('greenSection', 'greenButton','green')">Green Signal</button><p class="text-shadow">Go</p>
+            </div>
+</div>
+        <!-- red button -->
+        <div id="redSection" class="section">
+          <div class="container main-card">
+            <div class="card my-5 mx-auto" style="max-width:100%" >
+              <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" >
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="stop.jpg" class="d-block w-100" alt="people stop">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="wait.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="traffic .jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+                <div class="card-body">
+                <h5 class="card-title text-center fw-bold fs-5  text-primary text-shadow">Red Signal Rules</h5>
+                <ul class=" card-text list-unstyled fs-5 ">
+                  <li><i class="fa-solid fa-pen-ruler text-primary pe-2"></i><span class="fw-bold">Don't Run the Red:</span> Don't proceed through the intersection or cross the stop line.</li>
+                  <li><i class="fa-solid fa-pen-ruler text-primary pe-2"></i><span class="fw-bold">Don't Speed Up:</span>Don't speed up to try to make it through the intersection before the light turns red.</li>
+                  <li><i class="fa-solid fa-pen-ruler text-primary pe-2"></i><span class="fw-bold">Don't Ignore the Signal:</span>Don't ignore the red signal or try to "beat the light.</li>
+                  <li><i class="fa-solid fa-pen-ruler text-primary pe-2"></i><span class="fw-bold">Don't Block the Intersection:</span> Don't block the intersection or crosswalk with your vehicle.</li>
+                  <li><i class="fa-solid fa-pen-ruler text-primary pe-2"></i><span class="fw-bold">Don't Use Mobile Phones:</span> Don't use mobile phones or engage in distracting activities while driving or walking near a red signal..</li>
+              </ul>
+              
+              </div>
+            </div>
+          </div>
+
+              <div>
+                <div class="row my-5 mx-2">
+                    <!-- Card for Do's -->
+                    <div class="col-md-6 mb-3">
+                      <div class="card w-80 h-800 fs-5 " >
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-success fw-bold text-shadow">DO's for Red Signal</h5>
+                          <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-success pe-2"></i><span class="fw-bold">Stop Completely: </span>Come to a complete halt before the stop line or crosswalk.</li>
+                            <li><i class="fas fa-check-circle text-success pe-2"></i><span class="fw-bold">Be Aware of Others:</span> Look for pedestrians, cyclists, or other vehicles before proceeding.</li>
+                            <li><i class="fas fa-check-circle text-success pe-2"></i> <span class="fw-bold">Yield to Pedestrians:</span>  Yield to pedestrians and other vehicles that have already entered the intersection.</span></li>
+                            <li><i class="fas fa-check-circle text-success  pe-2"></i><span class="fw-bold">Wait for the Green:</span> Wait for the green signal or a clear path before proceeding.</span></li>
+                            <li><i class="fas fa-check-circle text-success pe-2"></i><span class="fw-bold">Follow Traffic Rules:</sapn> Follow all traffic rules and signs, including pedestrian crossings and traffic signals.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Card for Don'ts -->
+                    <div class="col-md-6">
+                      <div class="card w-200 h-auto fs-5 ">
+                        <div class="card-body">
+                            <h5 class="card-title text-center text-danger fw-bold text-shadow">DON'Ts for Red Signal</h5>
+                          <ul class="list-unstyled">
+                            <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Run the Red:</span> Don't proceed through the intersection or cross the stop line.</li>
+                            <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Speed Up:</span>Don't speed up to try to make it through the intersection before the light turns red.</li>
+                            <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Ignore the Signal:</span>Don't ignore the red signal or try to "beat the light.</li>
+                            <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Block the Intersection:</span> Don't block the intersection or crosswalk with your vehicle.</li>
+                            <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Use Mobile Phones:</span> Don't use mobile phones or engage in distracting activities while driving or walking near a red signal..</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>   
+        </div>
+        
+          
+          <!-- yellow button -->
+          <div id="yellowSection" class="section">
+            <div class="container main-card">
+                <div class="card my-5 mx-auto" style="max-width: 100%;">
+                    <div id="carouselYellow" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="2000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="yellow1.jpg" class="d-block w-100" alt="yellow signal">
+                                <div class="carousel-caption d-none d-md-block"></div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="yellow3.jpeg" class="d-block w-100" alt="yellow signal">
+                                <div class="carousel-caption d-none d-md-block"></div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="stop.jpg" class="d-block w-100" alt="yellow signal">
+                                <div class="carousel-caption d-none d-md-block"></div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselYellow" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselYellow" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center fw-bold text-warning text-shadow">Yellow signal rules</h5>
+                        <ul class="card-text list-unstyled fs-5">
+                            <li><i class="fa-solid fa-pen-ruler text-warning pe-2"></i><span class="fw-bold">Caution Ahead: </span>The yellow signal indicates that the red light is about to appear.</li>
+                            <li><i class="fa-solid fa-pen-ruler text-warning pe-2"></i><span class="fw-bold">Slow Down:</span> Slow down and prepare to come to a complete stop.</li>
+                            <li><i class="fa-solid fa-pen-ruler text-warning pe-2"></i><span class="fw-bold">Don't Accelerate:</span> Do not accelerate or try to beat the red light.</li>
+                            <li><i class="fa-solid fa-pen-ruler text-warning pe-2"></i><span class="fw-bold">Stop Before the Line: </span>Come to a complete stop before the stop line or crosswalk, if possible.</li>
+                            <li><i class="fa-solid fa-pen-ruler text-warning pe-2"></i><span class="fw-bold">Use Common Sense: </span>Use your judgment and common sense when approaching an intersection with a yellow signal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+              <div class="row my-5 mx-2">
+                <!-- Card for Do's -->
+                <div class="col-md-6 mb-3">
+                  <div class="card w-80 h-800 fs-5 " >
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-success fw-bold text-shadow">DO's for Yellow Signal</h5>
+                      <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success pe-2"></i><span class="fw-bold">Slow Down: </span> Gradually slow down your vehicle to come to a safe stop.</li>
+                        <li><i class="fas fa-check-circle  text-success pe-2"></i><span class="fw-bold">Prepare to Stop:</span> Get ready to stop by taking your foot off the accelerator and preparing to press the brake pedal.</li>
+                        <li><i class="fas fa-check-circle text-success pe-2"></i> <span class="fw-bold">Be Cautious:</span> Be cautious of pedestrians, bicyclists, and other vehicles that may be in the intersection.</li>
+                        <li><i class="fas fa-check-circle text-success  pe-2"></i><span class="fw-bold">Use Your Judgment:</span> Use your judgment to determine if you can safely stop before the intersection or if it's better to proceed with caution.</li>
+                        <li><i class="fas fa-check-circle  text-success pe-2"></i><span class="fw-bold">Check Your Surroundings: </span> Check your surroundings, including your rearview and side mirrors, to make sure it's safe to stop.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Card for Don'ts -->
+                <div class="col-md-6 ">
+                  <div class="card w-80 h-700 fs-5 ">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-danger fw-bold text-shadow">DON'Ts for Yellow Signal</h5>
+                      <ul class="list-unstyled">
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Speed Up:</span> Don't try to speed up to beat the red light.</li>
+                        <li><i class="fas fa-times-circle text-danger  pe-2"></i><span class="fw-bold">Don't Run the Red:</span> Don't run the red light, even if you think you can make it through the intersection before it turns red.</li>
+                        <li><i class="fas fa-times-circle text-danger  pe-2"></i><span class="fw-bold">Don't Tailgate:</span>Don't tailgate or follow other vehicles too closely, as this can increase your stopping distance</li>
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Take Risks:</span> Don't take risks by trying to squeeze through the intersection or make a last-minute turn.</li>
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Get Distracted:</span> Don't get distracted by your phone, GPS, or other passengers while approaching an intersection with a yellow signal.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+           </div>
+          </div>
+
+          
+          <!-- green button -->
+          <div id="greenSection" class="section">
+            <div class="container main-card">
+              <div class="card my-5 mx-auto" style="max-width:100%; height:fit-content">
+                <div id="carouselGreen" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="3000" >
+                    
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="green.jpg" class="d-block w-100" alt="people stop">
+                        <div class="carousel-caption d-none d-md-block"></div>
+                          
+                      </div>
+                      <div class="carousel-item">
+                        <img src="green1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="grren2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGreen" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselGreen" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold text-success text-shadow">Green Signal Rules</h5>
+                  <ul class=" card-text list-unstyled fs-5 ">
+                    <li><i class="fa-solid fa-pen-ruler text-success pe-2"></i><span class="fw-bold">Speed Limits: </span> Obey the speed limit Avoid speeding to ensure safety</li>
+                    <li><i class="fa-solid fa-pen-ruler text-success pe-2"></i><span class="fw-bold">Pedestrian Priority:</span>Yield to pedestrians and bicyclists Give them the right of way </li>
+                    <li><i class="fa-solid fa-pen-ruler text-success pe-2"></i><span class="fw-bold">Safe Distance Maintain:</span>a safe following distance Leave enough space to react</li>
+                    <li><i class="fa-solid fa-pen-ruler text-success pe-2"></i><span class="fw-bold">Safety First: </span> Proceed with caution Be mindful of your surroundings</li>
+                    <li><i class="fa-solid fa-pen-ruler text-success pe-2"></i><span class="fw-bold">Lane Changes: </span>Watch for lane changes Check your blind spots</li>
+                </ul>
+                  
+                </div>
+              </div>
+            </div>
+            
+              
+              <div class="row my-5 mx-2">
+                <!-- Card for Do's -->
+                <div class="col-md-6 mb-3">
+                  <div class="card w-80 h-800 fs-5" >
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-success fw-bold text-shadow">DO's for Green Signal</h5>
+                      <ul class="list-unstyled">
+                        <li><i class="fas fa-circle-check text-success pe-2" ></i><span class="fw-bold">Proceed with Caution: </span> Go through the intersection or continue driving in the same direction. </li>
+                        <li><i class="fas fa-circle-check text-success pe-2"></i><span class="fw-bold">Maintain Speed :</span>Continue driving at a safe speed, but do not accelerate suddenly.</li>
+                        <li><i class="fas fa-circle-check text-success pe-2"></i> <span class="fw-bold">Be Aware of Pedestrians:</span>Yield to pedestrians and bicyclists who are still in the intersection.</span></li>
+                        <li><i class="fas fa-circle-check text-success pe-2"></i><span class="fw-bold">Merge with Care:</span> Merge with traffic in the intersection or on the other side of the signal.</span></li>
+                        <li><i class="fas fa-circle-check text-success pe-2"></i><span class="fw-bold">Follow Lane Markings:</span>  Stay in your lane and follow the lane markings through the intersection.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Card for Don'ts -->
+                <div class="col-md-6 "> 
+                  <div class="card w-80 h-700 fs-5">
+                    <div class="card-body">
+                        <h5 class="card-title text-center text-danger fw-bold text-shadow">DON'Ts for Green Signal</h5>
+                      <ul class="list-unstyled">
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Speed Up:</span>  Do not accelerate suddenly or speed up to try to beat the yellow light.</li>
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Run:</span> the Red Do not enter the intersection if the light has already turned red.</li>
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Block the Intersection:</span>Do not block the intersection or crosswalks with your vehicle.</li>
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Change Lanes:</span> Do not change lanes or make sudden turns within the intersection.</li>
+                        <li><i class="fas fa-times-circle text-danger pe-2"></i><span class="fw-bold">Don't Disregard Pedestrians:</span> Do not disregard pedestrians or bicyclists who have the right of way./li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               
+              </div>
+           </div>
+        
+          
+          
+      </div>
+   
+
+      <script src="script.js"></script>
+      
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-hW71Z/iBdEWNsFXM9z4HDrDlSStMkG9j5Y5jXIz9jZm1g4c/1fa2+12eK50HApNP" crossorigin="anonymous"></script>
+  </body>
+
+</html>

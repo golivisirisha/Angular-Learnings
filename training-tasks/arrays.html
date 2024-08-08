@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="length1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p> 
+<p id="loop"></p>
+<p id="backward"></p>
+
+<h1>functions</h1>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+
+
+<script>
+const cars = ["Saab", "Volvo", "BMW"];//creating  array
+document.getElementById("demo").innerHTML = cars;
+
+const fruits = new Array("apples", "mango", "lemon","banana","orange");// creating an array usinhg new keyword
+document.getElementById("demo1").innerHTML = fruits;
+
+let size=cars.length;
+document.getElementById("length1").innerHTML=size;/// finding length of an array using length menthod
+
+//removing methods
+fruits.pop();
+document.getElementById("demo2").innerHTML=fruits;
+
+fruits.shift();
+document.getElementById("demo3").innerHTML=fruits;
+
+//adding methods
+fruits.push("pinapple");
+document.getElementById("demo4").innerHTML=fruits;
+
+fruits.unshift("graps");
+document.getElementById("demo5").innerHTML=fruits;
+
+//indexof
+let index=fruits.indexOf("mango");
+
+document.getElementById("demo6").innerHTML=index;
+
+//includes
+document.getElementById("demo7").innerHTML=fruits.includes("lemon");
+
+//sorting
+document.getElementById("demo8").innerHTML=fruits.sort();
+
+//splicing 
+fruits.splice(2,2,"kiwi","sapota");// here the 1st 2 represents the starting index and 2nd 2 represents no.of items to delete and then the other fuits added in the last are added from the 2nd index on wards
+document.getElementById("demo9").innerHTML=fruits;
+
+//slcing
+let example=fruits.slice(1)
+document.getElementById("demo10").innerHTML=example;
+
+/*foreach method allows you to iterate over an array and perform an operation 
+on each element of the array. It takes a callback function as an argument
+ and applies it to each element of the array.*/
+
+
+const numbers=[20,11,65,84,39,22];
+let text="";
+numbers.forEach(myfunction);
+
+document.getElementById("demo11").innerHTML=text;
+function myfunction(value,array){
+    text+=value+" <br>";
+}
+
+
+//map method method creates a new array by performing a function on each array element.
+
+
+let numbers1=numbers.map(myfunction2);
+
+function myfunction2(value){
+    return value*12;
+
+}
+
+document.getElementById("demo12").innerHTML=numbers1;
+
+
+//filter() method creates a new array with array elements that pass a test.
+
+let numbers2=numbers.filter(myfunction3);
+function myfunction3(value){
+    return value>25;
+}
+document.getElementById("demo13").innerHTML=numbers2;
+
+
+//reduce() method runs a function on each array element to produce (reduce it to) a single value
+
+let numbers3=numbers.reduce(myfunction4);
+function myfunction4(value){
+    return value+value;
+}
+document.getElementById("demo14").innerHTML=numbers3;
+
+//for loop iterate over the array
+let details=["siri","student",2024-2003,["siri","bhavi","vasu"],true]; //here we have stored different data types in the array
+let output="";
+let types=[];// here we are creating array for  the type of each element in the details array.
+for (let i=0;i < details.length;i++){
+    output+=details[i] +" "+typeof(details[i])+"<br>";
+    types.push(typeof(details[i]));
+
+}
+document.getElementById("loop").innerHTML=output +"<br>"+types;
+
+
+//for loop iterate over the backward of array
+let backward="";
+
+for(let i=details.length-1;i>=0;i--){
+    backward+=details[i]+" "+i+"<br>";
+
+}
+
+document.getElementById("backward").innerHTML=`iterate over the array in backward direction ${backward}`;
+
+//functions
+//function declaration
+
+function examplefunction(x,y){
+    return x*y
+}
+let examplevalues=examplefunction(2,5);
+document.getElementById("demo15").innerHTML=examplevalues;
+
+//anonomous functions
+// here we can assign function to the variable 
+let practice=function(x,y){
+    return x/y;
+}
+let values=practice(2,5);
+document.getElementById("demo16").innerHTML="anonomous functions "+values;
+
+//arrow functions
+let arrow1=(x,y)=>x+y;
+let values1=arrow1(4,7);
+document.getElementById("demo17").innerHTML="arrow functions "+values1;
+
+
+
+
+</script>
+
+</body>
+</html>

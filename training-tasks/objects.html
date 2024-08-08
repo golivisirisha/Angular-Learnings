@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript objects</h1>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+
+<script>
+    const details={firstname:"siri",lastname:"golvi",age:20,branch:"cse"};
+
+    document.getElementById("demo").innerHTML=details.age;
+
+    //dot notation we accese the object values when we accese them with the actual key values only 
+    document.getElementById("demo1").innerHTML=details.firstname+" " + details.lastname;
+
+    //bracket notation we can accese the values with either actual names or else with computational values
+
+    let key="firstname";
+    document.getElementById("demo2").innerHTML=details[key];
+
+    document.getElementById("demo3").innerHTML=details.key; // it will give undefined because it won't take the computational values. 
+
+    //object method ( which means when we write function as a value to the key of an object then we will call it as an method)
+    const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+document.getElementById("demo4").innerHTML=person.fullName();
+
+//creating the object using constructor function
+
+function Person1(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// Create two Person objects
+const myFather = new Person1("John", "Doe", 50, "blue");
+const myMother = new Person1("Sally", "Rally", 48, "green");
+
+document.getElementById("demo5").innerHTML="My father is " + myFather.age + ". My mother is " + myMother.age + ".";
+
+
+</script>
+</body>
+</html>   

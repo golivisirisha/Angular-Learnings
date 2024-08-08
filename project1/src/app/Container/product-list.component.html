@@ -1,0 +1,75 @@
+
+
+<!-- <img src="/assets/iphone.png"> -->
+ <!-- <img src="{{product.pimage}}">  by using string interpolation-->
+
+
+<!-- <div class="ekart--product--container">
+    <img [src]="product.pimage">
+
+<p>Name:{{product.name}}</p>
+<p>price:{{"$"+product.price}}</p>
+    <p>color:{{product.color}}</p>
+    <p>Discounted price:{{getDiscountedPrice()}}</p>
+<p>{{product.inStock > 0 ? 'only' + product.inStock +'items left' : 'not in stock'}}</p>
+<button (click)="incrementCart()">+</button>
+<span>{{addToCart}}</span>
+<button (click)="decrementCart()">-</button>
+
+
+<p>Name is {{Name}}</p>
+</div>
+
+ <button [disabled]="!(product.inStock >0)">BUY NOW</button><br>
+
+ property binding 
+
+ <input [value]="Name" (input)="onChangeName($event)"><br> 
+
+<input bind-value="name"> we can also use bind-value for property binding
+ 
+ -->
+
+ <div class="ekart--product--container">
+    <app-search (SearchTextChanged)="setSearchText($event)"></app-search>
+   
+    <!-- @for (hero of heros; track hero){
+        <p>number:{{hero}}</p>
+    }
+    @empty{
+        <p></p>
+    } -->
+
+    <!-- <div *ngFor="let item of ListofStrings ">
+        <p>current item is {{item}}</p>
+      </div> -->
+    <app-products [searchText]="searchText" #ProductsComponent></app-products>
+    <product-details *ngIf="ProductsComponent.selectedProduct" [productlistcomp]="productslistComponent"></product-details>
+    
+    <div class="ekart-featured-products">
+        <div class="ekart-featured-product-heading">
+            <h1>Latest Arrival Iin pupolar brands </h1>
+
+        </div>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Nike</h3>
+            <button class="call-to-action">Show New Arrivals in Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Nike</h3>
+            <button class="call-to-action">Show New Arrivals in Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Nike</h3>
+            <button class="call-to-action">Show New Arrivals in Nike</button>
+        </featured-brands>
+        
+           
+
+
+    </div>
+    
+</div>
+      
+
+

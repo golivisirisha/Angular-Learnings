@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>conditions</h1>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <h1>for loop</h1>
+        <p id="demo2"></p>
+        <h1>while loop</h1>
+        <p id="demo3"></p>
+        <h1 >switch statement</h1>
+        <p id="demo4"></p>
+
+        <script>
+
+            //if else conditions
+            let age=18;
+            let text;
+            if(age>=18){
+                text="eligible for vote";
+            }else{
+                text="not eligible for vote";
+            }
+            document.getElementById("demo").innerHTML=text;
+
+            // using else if 
+            let num=15;
+            let txt;
+            if(num>10){
+                txt=num+" number is greater than 10";
+            }else if(num===10){
+                txt=num +" number is equal to 10";
+            }else{
+                txt=num +" number is less than 10";
+            }
+            document.getElementById("demo1").innerHTML=txt;
+
+            // for loop
+            // finding  sum of all the numbers in the array that are divisible by 3 or 5.
+
+            function sumDivisibleByThreeOrFive(array){
+                let sum=0;
+                for(let i=0; i<array.length; i++){
+                    if(array[i]%3===0 || array[i]%5===0){
+                        sum+=array[i];
+                    }
+                }
+                return sum;
+            }
+
+            let numbers=[12,15,90,43,21,62,100];
+            let output=sumDivisibleByThreeOrFive(numbers);
+            document.getElementById("demo2").innerHTML="sum of all the numbers in the array that or divisible by 3 or 5 is "+output;
+
+        // writing JavaScript function to reverse a given integer.
+        function reversenumber(num){
+            let reversed=0;
+            let isnegative=num<0;
+            num=Math.abs(num);
+
+            while(num>0){
+                const digit = num % 10; // Extract the last digit
+                reversed = (reversed * 10) + digit; // Append the digit to the reversed number
+                num = Math.floor(num / 10); // Remove the last digit from the original number
+                }
+            return isnegative?-reversed:reversed;
+        }    
+
+
+    let value=-4356789;
+    let reverseoutcome=reversenumber(value);
+    document.getElementById("demo3").innerHTML=`the reverese of ${value} is ${reverseoutcome}`;
+
+
+    //switch statement
+    //determine the day of the week based on a numerical input
+
+    function getDayOfWeek(dayNumber){
+        let dayname;
+        switch(dayNumber){
+            case 1:
+                dayname="monday";
+                break;
+            case 2:
+                dayname="tuesday";
+                break;
+            case 3:
+                dayname="wednesday";
+                break;
+            case 4:
+                dayname="thursday";
+                break;
+            case 5:
+                dayname="friday";
+                break;
+            case 6:
+                dayname="saturday";
+                break;
+            case 7:
+                dayname="sunday";
+                break;
+            default:
+                dayname="Invalid day number";
+                break;
+            
+        }
+        return dayname;
+    }
+    let daynumber=getDayOfWeek(3);
+    document.getElementById("demo4").innerHTML=daynumber;
+
+
+      
+
+            
+        </script>
+    </body>
+</html>

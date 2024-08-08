@@ -1,0 +1,107 @@
+body {
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+
+  .section {
+    display: none; /* Initially hide all sections */
+  }
+
+  
+  
+  .card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid hsl(190, 13%, 62%);
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  
+  .text-shadow {
+    text-shadow: 2px 2px 5px rgba(36, 21, 134, 0.3);
+}
+
+
+.traffic-light {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 350px;
+    background-color: #eeebeb;
+    border: 10px solid grey;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 20px auto;
+    opacity: 0.2; /* Initially dim */
+    transition: opacity 0.3s ease;
+}
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.green { background-color: green; }
+.active { opacity: 1; }
+ 
+ 
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn {
+   
+    margin:auto;
+    width:250px;
+    margin: 30px  0px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    border-radius: 20px;
+    box-shadow: 0 6px 6px rgba(34, 96, 105, 0.6);
+}
+#redButton.active{
+  box-shadow: 0 0px 10px rgba(255, 0, 0, 0.8);
+
+}
+#greenButton.active{
+  box-shadow: 0 0px 10px rgba(9, 126, 58, 0.8);
+
+}
+#yellowButton.active{
+  box-shadow: 0 0px 10px rgba(222, 212, 14, 0.8);
+
+}
+.main-card{
+  width:50%;
+}
+
+@media (max-width:768px){
+  .btn {
+   
+    
+    width:150px;
+    font-size: 12px;
+
+  }
+  .main-card{
+    width:100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
